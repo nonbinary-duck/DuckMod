@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "villanelle-duckmod",
+  "version": "${version}",
+  "name": "Duckmod",
+  "description": "Adds and changes some things to the game server-side.",
+  "authors": [
+    "nonbinary-duck"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "CC-BY-SA-4.0",
+  "icon": "assets/villanelle-duckmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["duckmod.ModInit"],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "villanelle-duckmod.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "1.16.x",
+    "fabricloader": ">=0.9.3"
+  }
+}

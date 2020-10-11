@@ -1,0 +1,10 @@
+{
+	"command.villanelle-duckmod.setting.unknown": "Unknown setting",
+	"command.villanelle-duckmod.setting.soft_fail": "The setting '%s' already has the value '%s', so has not been updated",
+	"command.villanelle-duckmod.setting.op_value_changed": "DuckMod setting '%s' has been changed to '%s'",
+	"command.villanelle-duckmod.setting.op_value_changed.extra": "DuckMod setting '%s' has been changed to '%s' by %s",
+	"command.villanelle-duckmod.setting.no_permission_to_set": "I'm sorry but you don't have the right permission level to set values in duck settings",
+	"command.villanelle-duckmod.settings.descriptions.fun.extra_damage_crits": "Calculates critical hits as a log function of the entity's fall distance. Minimum damage from crits is the default (0.5 x baseDamage)",
+	"command.villanelle-duckmod.settings.descriptions.feature.inv_end": "The player's inventory is not dropped when they die in the end or when they die below y=0. XP is still dropped."
+}
+  
