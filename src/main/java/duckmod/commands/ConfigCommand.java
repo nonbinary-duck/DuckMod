@@ -17,7 +17,7 @@ public class ConfigCommand {
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
 
-        LiteralArgumentBuilder command =
+        LiteralArgumentBuilder commandNode =
                 (LiteralArgumentBuilder)
                         ((LiteralArgumentBuilder)
                                 CommandManager.literal("duckmod")
@@ -31,7 +31,7 @@ public class ConfigCommand {
         DuckSetting[] settings = DuckSettings.getSettings();
 
         for (DuckSetting setting : settings) {
-            command.then(
+            commandNode.then(
                     CommandManager.literal(setting.getName())
                             .executes(
                                     (context) -> {
@@ -39,7 +39,7 @@ public class ConfigCommand {
                                                 setting.getName(), context.getSource());
                                     }));
 
-            command.then(
+            commandNode.then(
                     CommandManager.literal(setting.getName())
                             .then(
                                     CommandManager.argument("value", setting.commandArgument())
@@ -51,21 +51,7 @@ public class ConfigCommand {
                                                     })));
         }
 
-        dispatcher.register(command);
-    }
-
-    protected static int m_executeCommand(CommandContext<ServerCommandSource> context) {
-        try {
-            ServerPlayerEntity player = context.getSource().getPlayer();
-            boolean bool = BoolArgumentType.getBool(context, "enabled");
-
-            player.sendMessage(new LiteralText(bool + ""), false);
-            System.out.println(bool + "");
-
-        } catch (Exception e) {
-            if (e instanceof CommandSyntaxException) return 0;
-        }
-
-        return 1;
+        // Register the command node with the server
+        dispatcher.register(commandNode);
     }
 }

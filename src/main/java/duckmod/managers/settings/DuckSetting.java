@@ -18,7 +18,7 @@ public abstract class DuckSetting<T> {
      */
     public Text getSoftFailChangedMessage() {
         return new TranslatableText(
-                "command.villanelle-duckmod.setting.soft_fail", getName(), toString());
+                "command.villanelle-duckmod.setting.soft_fail", getMessageName(), toMessageString());
     }
 
     /** A message to send OPs when a setting is updated */
@@ -27,6 +27,7 @@ public abstract class DuckSetting<T> {
     }
 
     /**
+     * (optional)
      * A message to send OPs and the user when a setting is updated
      *
      * @param changedBy (optional) The name of the PlayerEntity which updated the setting
@@ -34,19 +35,22 @@ public abstract class DuckSetting<T> {
     public Text getChangedMessage(String changedBy) {
         if (changedBy == "") {
             return new TranslatableText(
-                    "command.villanelle-duckmod.setting.op_value_changed", getName(), toString());
+                    "command.villanelle-duckmod.setting.op_value_changed", getMessageName(), toMessageString());
         } else {
             return new TranslatableText(
                     "command.villanelle-duckmod.setting.op_value_changed.extra",
-                    getName(),
-                    toString(),
-                    changedBy);
+                    getMessageName(),
+                    toMessageString(),
+                    "§c§l§o" + changedBy + "§r");
         }
     }
 
-    /** A message to send the user when they request what the current value of a setting is */
+    /**
+     * (optional)
+     * A message to send the user when they request what the current value of a setting is
+     */
     public Text getGetMessage() {
-        return new TranslatableText("commands.messages.setting.getValue", getName(), toString());
+        return new TranslatableText("commands.messages.setting.getValue", getMessageName(), toMessageString());
     }
 
     /** The value of your setting */
@@ -56,8 +60,14 @@ public abstract class DuckSetting<T> {
      * The name must always be unique otherwise it will possibly crash the deserializer. This is a
      * raw string, not translatable.
      */
-    public String getName() {
-        return "";
+    public abstract String getName();
+
+    /**
+     * (optional) 
+     * A formatted version of getName (should end with §r)
+     */
+    public String getMessageName() {
+        return "§d§l" + getName() + "§r";
     }
 
     /** The translatable text ID of the description */
@@ -81,6 +91,14 @@ public abstract class DuckSetting<T> {
      * new line. Users are fed this value (by default) when they set or get the value
      */
     public abstract String toString();
+
+    /**
+     * (optional)
+     * Should be toString but with fancy formatting like §l (bold). Must always end with §r
+     */
+    public String toMessageString() {
+        return "§5§l" + toString() + "§r";
+    }
 
     /** This is needed to make sure the value can be deserialized */
     @Nullable

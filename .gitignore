@@ -12,7 +12,7 @@ classes/
 
 #vscode
 .settings/
-.vscode/
+.vscode/settings.json
 bin/
 .classpath
 .project

@@ -49,19 +49,6 @@ public abstract class LivingEntityMixin extends Entity {
                         (float) attacker.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
                 float enchantedDamage = EnchantmentHelper.getAttackDamage(stack, self.getGroup());
 
-                if (attacker instanceof PlayerEntity) {
-                    ((PlayerEntity) attacker)
-                            .sendMessage(
-                                    new LiteralText(
-                                            "baseDamage: "
-                                                    + baseDamage
-                                                    + " enchantedDamage: "
-                                                    + enchantedDamage
-                                                    + " finalDamage: "
-                                                    + amount),
-                                    false);
-                }
-
                 float newDamage =
                         canApplyExtra(attacker, amount, hand, stack, baseDamage, enchantedDamage);
 

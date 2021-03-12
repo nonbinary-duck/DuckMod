@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
+
+import net.minecraft.client.texture.NativeImage.Format;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
@@ -204,10 +206,7 @@ public final class DuckSettings {
             DuckSetting setting = settings.get(settingName);
 
             source.sendFeedback(
-                    new LiteralText(
-                            String.format(
-                                    "The setting \"%s\" has a value of \"%s\"",
-                                    setting.getName(), setting.toString())),
+                    new TranslatableText("command.villanelle-duckmod.setting.getValue", setting.getMessageName(), setting.toMessageString()),
                     false);
             return 1;
         }

@@ -16,7 +16,7 @@ minecraft {
 
 spotless {
 // optional: limit format enforcement to just the files changed by this feature branch
-ratchetFrom 'origin/master'
+// ratchetFrom 'origin/master'
 
 format 'misc', {
 	// define the files to apply `misc` to
@@ -51,7 +51,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
 processResources {
