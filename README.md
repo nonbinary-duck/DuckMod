@@ -1,17 +1,20 @@
-# DuckMod
+# DuckMod!
 
-DuckMod is a collection of modifications to the game in a server-side environment. The mods will be laid out in a similar style to the menu from [carpet](https://github.com/gnembon/fabric-carpet).
+<img src="Lesbian Duck.svg" alt="A simple vector sketch of a duck filled in with a gradient of the muted orange and pink from the lesbian flag. The logo of DuckMod." title="The lesbian duck" >
 
-If you haven't heard of [carpet](https://github.com/gnembon/fabric-carpet) I recommend checking it out. It is essential for technical Minecraft players, and also I have to recommend it because of learning fabric by trawling through their repo.
+Cool things and stuff for Minecraft!
 
-## Contributing
+Carpet-like commands to toggle mods on/off.
 
-Contributions are welcome!
+## Planned Features
 
-Please check out [forking.md](forking.md) for a guide on both how to easily make fabric mods using my repo as a base and also for contributing guidelines and rules.
+- Commands to toggle extensions on/off
+    - Sub-commands to provide parameters to the extensions
+- A way to convert chest and other block entities into falling sand in survive
+    - Without intruding on other mods like carpet movable block entities
+- A less dangerous void in the end
+    - Perhaps making it so a chest stores your stuff, not sure yet
 
-## License
+## Implemented Features
 
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-
-For a markdown formatted version see [LICENSE.md](LICENSE.md). Thanks to [idelberg](https://github.com/idleberg) and [contributors](https://github.com/idleberg/Creative-Commons-Markdown/graphs/contributors) for their [markdown formatted cc licensees repo](https://github.com/idleberg/Creative-Commons-Markdown) which [LICENSE.md](LICENSE.md) is copied directly from.
+- None!
