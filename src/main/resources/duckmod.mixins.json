@@ -3,9 +3,12 @@
 	"minVersion": "0.8",
 	"package": "duckmod.mixin",
 	"compatibilityLevel": "JAVA_8",
-	"mixins": [],
+	"mixins": [
+		"examples.Modify"
+	],
 	"client": [
-		"ExampleMixin"
+		"Loaded",
+		"examples.Redirects"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "/media/villanelle/Fred7/code/duckmodrunClientduckmod",
+			"script": "runClient",
+			"description": "Starts the 'null' run configuration",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"project": "duckmod",
+			"buildFile": "/media/villanelle/Fred7/The Department Of Goldbrickery/Raw Code/duckmod/build.gradle",
+			"rootProject": "duckmod",
+			"projectFolder": "/media/villanelle/Fred7/code/duckmod",
+			"workspaceFolder": "/media/villanelle/Fred7/code/duckmod",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: runClient"
+		}
+	]
+}
